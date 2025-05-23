@@ -38,7 +38,17 @@ class ShoppingCart:
         print()
 
     def shoppingcart(self):
-        print(f"\nWELCOME {self.customername.upper()} TO {self.shopname.upper()} 😊")
+        def welcome_box(message):
+         length = len(message)
+         print("+" + "-" * (length + 4) + "+")
+         print("|" + " " * (length + 4) + "|")
+         print(f"|  {message}  |")
+         print("|" + " " * (length + 4) + "|")
+         print("+" + "-" * (length + 4) + "+")
+
+# Example usage
+        welcome_box("Welcome to GaribKiDukan!")
+        # print(f"\nWELCOME {self.customername.upper()} TO {self.shopname.upper()} 😊")
         print("🛒 Please wait while we prepare your shopping experience 🛒\n")
         self.animated_loading("Starting")
         time.sleep(0.3)
@@ -92,7 +102,6 @@ class ShoppingCart:
                     break
             else:
                 print("⚠️ Invalid choice. Try again.\n")
-
 
 
 # Run the program
